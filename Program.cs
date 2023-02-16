@@ -4,7 +4,7 @@ class Program
     static void Main(string[] args)
     {
 string username;
-string ynresponse;
+string ynresponse = "y";
 string pizzabase;
 string pizzacrust;
 
@@ -13,8 +13,19 @@ string pizzacrust;
         Console.WriteLine($"Welcome to Aly's Pizza, {username}!");
         Console.WriteLine("Are you interested in a dessert pizza today? If so enter y in not enter n.");
         ynresponse = Console.ReadLine();
+        if (ynresponse == "y")
+        {
+            Console.WriteLine ("To Begin Your Order Please Choose One of the Three Pizza Bases! Please Type Your Choice.");
+        }
+        else
+        {
+           nresponse();
+           
+        }
+
             //if y then proceed to next phase if n then have message, thank you for chosing Aly's Pizza
-        Console.WriteLine ("To Begin Your Order Please Choose One of the Three Pizza Bases! Please Type Your Choice.");
+            // if y then continue, if n or others, then play message
+        
         Console.WriteLine ("Vanilla");
         Console.WriteLine ("Chocolate");
         Console.WriteLine ("Strawberry");
@@ -28,6 +39,7 @@ string pizzacrust;
         Console.WriteLine ("Gluton-Free");
         Console.WriteLine ("Sugar-Free");
         pizzacrust = Console.ReadLine();
+            //if option 1,2,..,5 then proceed if not then repeat
         Console.WriteLine ($"So Far We Have a {pizzabase} Pizza with {pizzacrust} Crust. Pizza-tastic!");
         Console.WriteLine ("Lastly, Let's Choose some Toppings! You Can Choose up to Three Toppings per Pizza!");
         Console.WriteLine ("Please Enter the Corrosponding Number One at a Time.");
@@ -40,9 +52,18 @@ string pizzacrust;
         Console.WriteLine ("7");
         Console.WriteLine ("8");
         Console.WriteLine ("9");
-            // I believe I need an Int for this and thes values will have to have the names show only.
+            // I believe I need an Int for this and the values will have to have the names show only.
             // Prices may be stored in a seperate area? Voidspace?
         Console.ReadKey(true);
 
+
+
+
+    static void nresponse()
+{
+         Console.WriteLine ("Thank You for Checking Out Aly's Pizza! Have a Good Day.");
+
+}
+       
     }
 }
