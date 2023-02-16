@@ -4,10 +4,9 @@ class Program
     static void Main(string[] args)
     {
 string username;
-
 string ynresponse;
-
 string pizzabase;
+string pizzacrust;
 
         Console.WriteLine("Please Enter Your First Name");
         username = Console.ReadLine();
@@ -28,7 +27,20 @@ string pizzabase;
         Console.WriteLine ("Stuffed");
         Console.WriteLine ("Gluton-Free");
         Console.WriteLine ("Sugar-Free");
-
+        pizzacrust = Console.ReadLine();
+        Console.WriteLine ($"So Far We Have a {pizzabase} pizza with {pizzacrust}. Pizza-tastic!");
+        Console.WriteLine ("Lastly, Let's Choose some Toppings! You Can Choose up to Three Toppings per Pizza!");
+        Console.WriteLine ("Please Enter the Corrosponding Number One at a Time.");
+        Console.WriteLine ("1");
+        Console.WriteLine ("2");
+        Console.WriteLine ("3");
+        Console.WriteLine ("4");
+        Console.WriteLine ("5");
+        Console.WriteLine ("6");
+        Console.WriteLine ("7");
+        Console.WriteLine ("8");
+        Console.WriteLine ("9");
+            // I believe I need an Int fot this and thes values will have to have the names show only.
 
         Console.ReadKey(true);
 
