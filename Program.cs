@@ -1,12 +1,14 @@
 ﻿namespace pizzaproject;
 class Program
 {
+
+    static string username ="";
+    static string ynresponse = "y";
+    static string pizzabase ="";
+    static string pizzacrust ="";
     static void Main(string[] args)
     {
-string username;
-string ynresponse = "y";
-string pizzabase;
-string pizzacrust;
+
 
         Console.WriteLine("Please Enter Your First Name");
         username = Console.ReadLine();
@@ -16,6 +18,7 @@ string pizzacrust;
         if (ynresponse == "y")
         {
             Console.WriteLine ("To Begin Your Order Please Choose One of the Three Pizza Bases! Please Type Your Choice.");
+            yresponse();
         }
         else
         {
@@ -26,11 +29,21 @@ string pizzacrust;
             //if y then proceed to next phase if n then have message, thank you for chosing Aly's Pizza
             // if y then continue, if n or others, then play message
         
+    }    
+    static void nresponse()
+    {
+            Console.WriteLine ("Thank You for Checking Out Aly's Pizza! Have a Good Day.");
+
+    }
+
+    static void yresponse()
+    {
         Console.WriteLine ("Vanilla");
         Console.WriteLine ("Chocolate");
         Console.WriteLine ("Strawberry");
         pizzabase = Console.ReadLine ();
             //add a part that if spelled wrong prompt again with Order line one
+            //Maybe only numbers with the words?
         Console.WriteLine ($"{pizzabase}? Awesome!");
         Console.WriteLine ("Now Please Choose Your Crust! Type it Below.");
         Console.WriteLine ("Thick");
@@ -55,15 +68,5 @@ string pizzacrust;
             // I believe I need an Int for this and the values will have to have the names show only.
             // Prices may be stored in a seperate area? Voidspace?
         Console.ReadKey(true);
-
-
-
-
-    static void nresponse()
-{
-         Console.WriteLine ("Thank You for Checking Out Aly's Pizza! Have a Good Day.");
-
-}
-       
     }
 }
