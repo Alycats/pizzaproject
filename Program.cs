@@ -28,7 +28,7 @@ string pizzacrust;
         Console.WriteLine ("Gluton-Free");
         Console.WriteLine ("Sugar-Free");
         pizzacrust = Console.ReadLine();
-        Console.WriteLine ($"So Far We Have a {pizzabase} pizza with {pizzacrust}. Pizza-tastic!");
+        Console.WriteLine ($"So Far We Have a {pizzabase} Pizza with {pizzacrust} Crust. Pizza-tastic!");
         Console.WriteLine ("Lastly, Let's Choose some Toppings! You Can Choose up to Three Toppings per Pizza!");
         Console.WriteLine ("Please Enter the Corrosponding Number One at a Time.");
         Console.WriteLine ("1");
@@ -40,8 +40,8 @@ string pizzacrust;
         Console.WriteLine ("7");
         Console.WriteLine ("8");
         Console.WriteLine ("9");
-            // I believe I need an Int fot this and thes values will have to have the names show only.
-
+            // I believe I need an Int for this and thes values will have to have the names show only.
+            // Prices may be stored in a seperate area? Voidspace?
         Console.ReadKey(true);
 
     }
