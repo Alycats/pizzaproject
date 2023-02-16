@@ -3,6 +3,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+string username;
+
+
+        Console.WriteLine("Please Enter Your First Name");
+        username = Console.ReadLine();
+        Console.WriteLine($"Welcome to Alyssa's Pizza, {username}!");
+
+
+
+
     }
 }
