@@ -24,7 +24,7 @@ PizzaProjectMain();
         Console.WriteLine($"Welcome to Aly's Pizza, {username}!");
         Console.WriteLine("Are you interested in a dessert pizza today? If so enter y if not enter n.");
              ynresponse = Console.ReadLine();
-        if (ynresponse == "y" || ynresponse == "yes")
+        if (ynresponse == "y" || ynresponse == "yes" || ynresponse == "Y")
         {
             Console.WriteLine ("To Begin Your Order Please Choose One of the Three Pizza Bases! Please Type Your Number Choice.");
             yresponse();
