@@ -76,7 +76,7 @@ PizzaProjectMain();
              pizzatoppings2 = Console.ReadLine();
              pizzatoppings3 = Console.ReadLine();
 
-        Console.WriteLine ($"So Your Order is {pizzabase}, with {pizzacrust} and {pizzatoppings1}, {pizzatoppings2}, and {pizzatoppings3}. ")
+        Console.WriteLine ($"So Your Order is {pizzabase}, with {pizzacrust} and {pizzatoppings1}, {pizzatoppings2}, and {pizzatoppings3}. ");
 
         prices();
         Console.ReadKey(true);
