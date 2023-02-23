@@ -6,7 +6,7 @@ class Program
     static string pizzatoppings2 = "";
     static string pizzatoppings3 = "";
     static string username = "";
-    static string ynresponse = "y";
+    static string ynresponse = "";
     static string pizzabase = "";
     static string pizzacrust = "";
     static void Main(string[] args)
@@ -82,7 +82,7 @@ class Program
             if (pizzacrust == "1" || pizzacrust == "2" || pizzacrust == "3" || pizzacrust == "4" || pizzacrust == "5")
             {
                 valid = true;
-                PizzaBaseStart();
+                PizzaToppingStart();
             }
             else
             {
@@ -90,8 +90,8 @@ class Program
                 Console.WriteLine("Invaid Response Please Try Again");
             }
         }
-        while (valid == false);
-        static void PizzaToppingStart()
+            while (valid == false);
+         static void PizzaToppingStart()
         {
             Console.WriteLine($"So Far We Have a {pizzabase} Pizza with {pizzacrust} Crust. Pizza-tastic!");
             Console.WriteLine("Lastly, Let's Choose some Toppings! You Can Choose up to Three Toppings per Pizza!");
@@ -105,11 +105,18 @@ class Program
             Console.WriteLine("7-Whipped Creams");
             Console.WriteLine("8-White Chocolates");
             Console.WriteLine("9-Hazelnut Spread");
-            // I believe I need an Int for this and the values will have to have the names show only.
             // Prices may be stored in a seperate area? Voidspace?/loop
+            
+            for (int i=0; i<=3; i++ )
+        {
             pizzatoppings1 = Console.ReadLine();
             pizzatoppings2 = Console.ReadLine();
             pizzatoppings3 = Console.ReadLine();
+        }
+           if (pizzatoppings1 == "1")
+           {
+
+           }
         }
              Console.WriteLine($"So Your Order is {pizzabase}, with {pizzacrust} crust and topped with {pizzatoppings1}, {pizzatoppings2}, and {pizzatoppings3}. ");
 
@@ -139,4 +146,4 @@ class Program
     }
     }
 }
-//CAN'T CHANGE THE WORDS TO NUMBERS, MESSES WITH MY PRETTY TEXT FIX AGAIN AND AGAIN AND AGAIN
+//CAN'T CHANGE THE WORDS TO NUMBERS, MESSES WITH MY PRETTY TEXT FIX AGAIN AND AGAIN AND AGAIN AHHHHHHHHHHHHHHHH
