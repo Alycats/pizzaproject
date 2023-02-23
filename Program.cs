@@ -11,7 +11,7 @@ class Program
     static string pizzacrust = "";
     static void Main(string[] args)
 {
-prices();
+PizzaProjectMain();
 
 }
 
@@ -76,23 +76,26 @@ prices();
              pizzatoppings2 = Console.ReadLine();
              pizzatoppings3 = Console.ReadLine();
 
+        Console.WriteLine ($"So Your Order is {pizzabase}, with {pizzacrust} and {pizzatoppings1}, {pizzatoppings2}, and {pizzatoppings3}. ")
+
+        prices();
         Console.ReadKey(true);
     }
     static void prices()
     {
-double pizzabase=0;
-double pizzacrust =0;
-double pizzatoppings1 =0;
-double pizzatoppings2 =0;
-double pizzatopping3 =0;
+double pizzabase=10;
+double pizzacrust =2.50;
+double pizzatoppings1 =1;
+double pizzatoppings2 =1;
+double pizzatopping3 =1;
 double price1 =0;
 double price2 =0;
 double total=0;
 
 price1 = pizzabase + pizzacrust + pizzatoppings1 + pizzatoppings2 + pizzatopping3;
-price2 = price1/2.5;
+price2 = price1/2.50;
 total= price1 + price2;
-Console.WriteLine ($"Your Total today will be = {total}");
+Console.WriteLine ($"Your Total Today, Including a 2.5% VAT, Will Be = ${total}");
 
 Console.ReadKey (true);
 
