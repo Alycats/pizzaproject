@@ -51,7 +51,7 @@ class Program
         do
         {
             pizzabase = Console.ReadLine();
-            //Maybe only numbers with the words?/loop
+            //Maybe only numbers with the words?
             if (pizzabase == "1" || pizzabase == "2" || pizzabase == "3")
             {
                 valid = true;
@@ -74,28 +74,44 @@ class Program
             Console.WriteLine("3-Stuffed");
             Console.WriteLine("4-Gluton-Free");
             Console.WriteLine("5-Sugar-Free");
+            bool valid = false;
+             do
+        {
             pizzacrust = Console.ReadLine();
-            //if option 1,2,..,5 then proceed if not then repeat/loop
+            //Maybe only numbers with the words?
+            if (pizzacrust == "1" || pizzacrust == "2" || pizzacrust == "3" || pizzacrust == "4" || pizzacrust == "5")
+            {
+                valid = true;
+                PizzaBaseStart();
+            }
+            else
+            {
+                valid = false;
+                Console.WriteLine("Invaid Response Please Try Again");
+            }
         }
-        Console.WriteLine($"So Far We Have a {pizzabase} Pizza with {pizzacrust} Crust. Pizza-tastic!");
-        Console.WriteLine("Lastly, Let's Choose some Toppings! You Can Choose up to Three Toppings per Pizza!");
-        Console.WriteLine("Please Enter the Corrosponding Number One at a Time.");
-        Console.WriteLine("1-Chocolate Sprinkles");
-        Console.WriteLine("2-Rainbow Sprinkles");
-        Console.WriteLine("3-Marshmellows");
-        Console.WriteLine("4-Generic Brand Candies");
-        Console.WriteLine("5-Gummies");
-        Console.WriteLine("6-Fruits");
-        Console.WriteLine("7-Whipped Creams");
-        Console.WriteLine("8-White Chocolates");
-        Console.WriteLine("9-Hazelnut Spread");
-        // I believe I need an Int for this and the values will have to have the names show only.
-        // Prices may be stored in a seperate area? Voidspace?/loop
-        pizzatoppings1 = Console.ReadLine();
-        pizzatoppings2 = Console.ReadLine();
-        pizzatoppings3 = Console.ReadLine();
-
-        Console.WriteLine($"So Your Order is {pizzabase}, with {pizzacrust} crust and topped with {pizzatoppings1}, {pizzatoppings2}, and {pizzatoppings3}. ");
+        while (valid == false);
+        static void PizzaToppingStart()
+        {
+            Console.WriteLine($"So Far We Have a {pizzabase} Pizza with {pizzacrust} Crust. Pizza-tastic!");
+            Console.WriteLine("Lastly, Let's Choose some Toppings! You Can Choose up to Three Toppings per Pizza!");
+            Console.WriteLine("Please Enter the Corrosponding Number One at a Time.");
+            Console.WriteLine("1-Chocolate Sprinkles");
+            Console.WriteLine("2-Rainbow Sprinkles");
+            Console.WriteLine("3-Marshmellows");
+            Console.WriteLine("4-Generic Brand Candies");
+            Console.WriteLine("5-Gummies");
+            Console.WriteLine("6-Fruits");
+            Console.WriteLine("7-Whipped Creams");
+            Console.WriteLine("8-White Chocolates");
+            Console.WriteLine("9-Hazelnut Spread");
+            // I believe I need an Int for this and the values will have to have the names show only.
+            // Prices may be stored in a seperate area? Voidspace?/loop
+            pizzatoppings1 = Console.ReadLine();
+            pizzatoppings2 = Console.ReadLine();
+            pizzatoppings3 = Console.ReadLine();
+        }
+             Console.WriteLine($"So Your Order is {pizzabase}, with {pizzacrust} crust and topped with {pizzatoppings1}, {pizzatoppings2}, and {pizzatoppings3}. ");
 
         prices();
         Console.ReadKey(true);
@@ -120,6 +136,7 @@ class Program
         //Can add a yes or no question that loops back to beginning if yes or ends prgram if not- Loop
         Console.ReadKey(true);
 
+    }
     }
 }
 //CAN'T CHANGE THE WORDS TO NUMBERS, MESSES WITH MY PRETTY TEXT FIX AGAIN AND AGAIN AND AGAIN
