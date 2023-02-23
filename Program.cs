@@ -10,6 +10,12 @@ class Program
     static string pizzabase = "";
     static string pizzacrust = "";
     static void Main(string[] args)
+{
+prices();
+
+}
+
+    static void PizzaProjectMain()
     {
 
 
@@ -30,7 +36,7 @@ class Program
         }
         
     }    
-    static void nresponse()
+  static void nresponse()
     {
             Console.WriteLine ("Thank You for Checking Out Aly's Pizza! Have a Good Day.");
 
@@ -72,5 +78,24 @@ class Program
 
         Console.ReadKey(true);
     }
+    static void prices()
+    {
+double pizzabase=0;
+double pizzacrust =0;
+double pizzatoppings1 =0;
+double pizzatoppings2 =0;
+double pizzatopping3 =0;
+double price1 =0;
+double price2 =0;
+double total=0;
+
+price1 = pizzabase + pizzacrust + pizzatoppings1 + pizzatoppings2 + pizzatopping3;
+price2 = price1/2.5;
+total= price1 + price2;
+Console.WriteLine ($"Your Total today will be = {total}");
+
+Console.ReadKey (true);
+
+}
 }
 //CAN'T CHANGE THE WORDS TO NUMBERS, MESSES WITH MY PRETTY TEXT FIX AGAIN AND AGAIN AND AGAIN
