@@ -38,32 +38,32 @@ class Program
 
     static void yresponse()
     {
-        Console.WriteLine ("1-Vanilla");
-        Console.WriteLine ("2-Chocolate");
-        Console.WriteLine ("3-Strawberry");
+        Console.WriteLine ("Vanilla");
+        Console.WriteLine ("Chocolate");
+        Console.WriteLine ("Strawberry");
              pizzabase = Console.ReadLine ();
             //Maybe only numbers with the words?
         Console.WriteLine ($"{pizzabase}? Awesome!");
         Console.WriteLine ("Now Please Choose Your Crust! Type the Number Below.");
-        Console.WriteLine ("1-Thick");
-        Console.WriteLine ("2-Thin");
-        Console.WriteLine ("3-Stuffed");
-        Console.WriteLine ("4-Gluton-Free");
-        Console.WriteLine ("5-Sugar-Free");
+        Console.WriteLine ("Thick");
+        Console.WriteLine ("Thin");
+        Console.WriteLine ("Stuffed");
+        Console.WriteLine ("Gluton-Free");
+        Console.WriteLine ("Sugar-Free");
              pizzacrust = Console.ReadLine();
             //if option 1,2,..,5 then proceed if not then repeat
         Console.WriteLine ($"So Far We Have a {pizzabase} Pizza with {pizzacrust} Crust. Pizza-tastic!");
         Console.WriteLine ("Lastly, Let's Choose some Toppings! You Can Choose up to Three Toppings per Pizza!");
         Console.WriteLine ("Please Enter the Corrosponding Number One at a Time.");
-        Console.WriteLine ("1-Chocolate Sprinkles");
-        Console.WriteLine ("2-Rainbow Sprinkles");
-        Console.WriteLine ("3-Marshmellows");
-        Console.WriteLine ("4-Generic Brand Candies");
-        Console.WriteLine ("5-Gummies");
-        Console.WriteLine ("6-Fruits");
-        Console.WriteLine ("7-Whipped Creams");
-        Console.WriteLine ("8-White Chocolates");
-        Console.WriteLine ("9-Hazelnut Spread");
+        Console.WriteLine ("Chocolate Sprinkles");
+        Console.WriteLine ("Rainbow Sprinkles");
+        Console.WriteLine ("Marshmellows");
+        Console.WriteLine ("Generic Brand Candies");
+        Console.WriteLine ("Gummies");
+        Console.WriteLine ("Fruits");
+        Console.WriteLine ("Whipped Creams");
+        Console.WriteLine ("White Chocolates");
+        Console.WriteLine ("Hazelnut Spread");
             // I believe I need an Int for this and the values will have to have the names show only.
             // Prices may be stored in a seperate area? Voidspace?
              pizzatoppings1 = Console.ReadLine();
@@ -73,3 +73,4 @@ class Program
         Console.ReadKey(true);
     }
 }
+//CAN'T CHANGE THE WORDS TO NUMBERS, MESSES WITH MY PRETTY TEXT FIX AGAIN AND AGAIN AND AGAIN
