@@ -64,7 +64,7 @@ class Program
             {
                 pizzabaseChoices[0] = Convert.ToInt32(Console.ReadLine());
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Console.WriteLine("Not a Number!");
             }
@@ -101,7 +101,7 @@ class Program
                 {
                     pizzacrustChoices[0] = Convert.ToInt32(Console.ReadLine());
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Console.WriteLine("Not a Number!");
                 }
@@ -132,7 +132,16 @@ class Program
                     bool valid = false;
                     do
                     {
-                        pizzatoppingsChoices[0] = Convert.ToInt32(Console.ReadLine());
+                        pizzatoppingsChoices[0] = -1;
+                        try
+                        {
+                            pizzatoppingsChoices[0] = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Not a Number!");
+                        }
+
                         if (pizzatoppingsChoices[0] == 1 || pizzatoppingsChoices[0] == 2 || pizzatoppingsChoices[0] == 3 || pizzatoppingsChoices[0] == 4 || pizzatoppingsChoices[0] == 5 || pizzatoppingsChoices[0] == 6 || pizzatoppingsChoices[0] == 7 || pizzatoppingsChoices[0] == 8 || pizzatoppingsChoices[0] == 9)
                         {
                             valid = true;
