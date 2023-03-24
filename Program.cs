@@ -87,6 +87,8 @@ class Program
             pizzacrustNames = new string[5] { "Thick", "Thin", "Stuffed", "Gluton-Free", "Sugar-Free" };
             pizzacrustPrice = new double[5] { 0.50, 0.50, 1.25, 0.25, 0.25 };
 
+            //moved here because didn't want to work with others
+
             Console.WriteLine($"{pizzabaseNames[pizzabaseChoices[0]-1]}? Awesome!");
             Console.WriteLine("Now Please Choose Your Crust! Type the Number Below.");
             for (int crust = 0; crust < 5; crust++)
@@ -105,7 +107,7 @@ class Program
                 {
                     Console.WriteLine("Not a Number!");
                 }
-                //Maybe only numbers with the words?
+                
                 if (pizzacrustChoices[0] == 1 || pizzacrustChoices[0] == 2 || pizzacrustChoices[0] == 3 || pizzacrustChoices[0] == 4 || pizzacrustChoices[0] == 5)
                 {
                     valid = true;
@@ -155,12 +157,12 @@ class Program
 
                     }
                     while (valid == false);
-                    // Prices may be stored in a seperate area? Voidspace?/loop  
+                    
 
                 }
-                Console.WriteLine($"So Your Order is {pizzabaseNames[pizzabaseChoices[0]-1]}, with {pizzacrustNames[pizzacrustChoices[0]-1]} crust and topped with {pizzatoppingNames[pizzatoppingsChoices[0]-1]}, {pizzatoppingNames[pizzatoppingsChoices[1]-1]}, and {pizzatoppingNames[pizzatoppingsChoices[2]-1]}. ");
+                Console.WriteLine($"So Your Order is {pizzabaseNames[pizzabaseChoices[0]-1]} pizza, with {pizzacrustNames[pizzacrustChoices[0]-1]} crust and topped with {pizzatoppingNames[pizzatoppingsChoices[0]-1]}, {pizzatoppingNames[pizzatoppingsChoices[1]-1]}, and {pizzatoppingNames[pizzatoppingsChoices[2]-1]}. ");
                 prices();
-
+            //output so customer can see what they ordered
             }
 
 
@@ -180,7 +182,19 @@ class Program
         total = price1 + price2;
         Console.WriteLine($"Your Total Today, Including a 2.5% VAT, Will Be = ${total:f2}");
 
+        Console.WriteLine("Would you like to restart? Yes or No?");
+        ynresponse = Console.ReadLine();
+        if (ynresponse == "y" || ynresponse == "yes" || ynresponse == "Y")
+        {
+            PizzaProjectMain();
+        }
+        else
+        {
+            nresponse();
 
+        }
+
+        ///simple price calculator
         //Can add a yes or no question that loops back to beginning if yes or ends prgram if not- Loop
         Console.ReadKey(true);
 
