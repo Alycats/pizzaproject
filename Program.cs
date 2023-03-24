@@ -122,7 +122,7 @@ class Program
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    Console.WriteLine($"So Far We Have a {pizzabaseChoices[0]} Pizza with {pizzacrustChoices[0]} Crust. Pizza-tastic!");
+                    Console.WriteLine($"So Far We Have a {pizzabaseNames[pizzabaseChoices[0]-1]} Pizza with {pizzacrustNames[pizzacrustChoices[0]-1]} Crust. Pizza-tastic!");
                     Console.WriteLine("Lastly, Let's Choose some Toppings! You Can Choose up to Three Toppings per Pizza!");
                     Console.WriteLine("Please Enter the Corrosponding Number One at a Time.");
                     for (int topping = 0; topping < 9; topping++)
@@ -158,7 +158,7 @@ class Program
                     // Prices may be stored in a seperate area? Voidspace?/loop  
 
                 }
-                Console.WriteLine($"So Your Order is {pizzabaseChoices[0]}, with {pizzacrustChoices[0]} crust and topped with {pizzatoppingsChoices[0]}, {pizzatoppingsChoices[1]}, and {pizzatoppingsChoices[2]}. ");
+                Console.WriteLine($"So Your Order is {pizzabaseNames[pizzabaseChoices[0]-1]}, with {pizzacrustNames[pizzacrustChoices[0]-1]} crust and topped with {pizzatoppingNames[pizzatoppingsChoices[0]-1]}, {pizzatoppingNames[pizzatoppingsChoices[1]-1]}, and {pizzatoppingNames[pizzatoppingsChoices[2]-1]}. ");
                 prices();
 
             }
