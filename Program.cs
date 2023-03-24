@@ -87,7 +87,7 @@ class Program
             pizzacrustNames = new string[5] { "Thick", "Thin", "Stuffed", "Gluton-Free", "Sugar-Free" };
             pizzacrustPrice = new double[5] { 0.50, 0.50, 1.25, 0.25, 0.25 };
 
-            Console.WriteLine($"{pizzabaseChoices[0]}? Awesome!");
+            Console.WriteLine($"{pizzabaseNames[pizzabaseChoices[0]-1]}? Awesome!");
             Console.WriteLine("Now Please Choose Your Crust! Type the Number Below.");
             for (int crust = 0; crust < 5; crust++)
             {
@@ -132,21 +132,20 @@ class Program
                     bool valid = false;
                     do
                     {
-                        pizzatoppingsChoices[0] = -1;
+                        pizzatoppingsChoices[i] = -1;
                         try
                         {
-                            pizzatoppingsChoices[0] = Convert.ToInt32(Console.ReadLine());
+                            pizzatoppingsChoices[i] = Convert.ToInt32(Console.ReadLine());
                         }
                         catch (Exception)
                         {
                             Console.WriteLine("Not a Number!");
                         }
 
-                        if (pizzatoppingsChoices[0] == 1 || pizzatoppingsChoices[0] == 2 || pizzatoppingsChoices[0] == 3 || pizzatoppingsChoices[0] == 4 || pizzatoppingsChoices[0] == 5 || pizzatoppingsChoices[0] == 6 || pizzatoppingsChoices[0] == 7 || pizzatoppingsChoices[0] == 8 || pizzatoppingsChoices[0] == 9)
+                        if (pizzatoppingsChoices[i] == 1 || pizzatoppingsChoices[i] == 2 || pizzatoppingsChoices[i] == 3 || pizzatoppingsChoices[i] == 4 || pizzatoppingsChoices[i] == 5 || pizzatoppingsChoices[i] == 6 || pizzatoppingsChoices[i] == 7 || pizzatoppingsChoices[i] == 8 || pizzatoppingsChoices[i] == 9)
                         {
                             valid = true;
-                            Console.WriteLine($"So Your Order is {pizzabaseChoices[0]}, with {pizzacrustChoices[0]} crust and topped with {pizzatoppingsChoices[0]}, {pizzatoppingsChoices[1]}, and {pizzatoppingsChoices[2]}. ");
-                            prices();
+
                         }
                         else
                         {
@@ -159,12 +158,12 @@ class Program
                     // Prices may be stored in a seperate area? Voidspace?/loop  
 
                 }
+                Console.WriteLine($"So Your Order is {pizzabaseChoices[0]}, with {pizzacrustChoices[0]} crust and topped with {pizzatoppingsChoices[0]}, {pizzatoppingsChoices[1]}, and {pizzatoppingsChoices[2]}. ");
+                prices();
 
             }
 
-            {
 
-            }
         }
 
         Console.ReadKey(true);
